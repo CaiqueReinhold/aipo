@@ -1,0 +1,22 @@
+[run]
+branch=1
+cover_pylib=0
+include=aipo/*
+
+[report]
+omit =
+    */python?.?/*
+    */site-packages/*
+    */pypy/*
+exclude_lines =
+    if\ typing\.TYPE_CHECKING\:
+
+    pragma: no cover
+
+    if sys.platform == 'win32':
+
+    \@abc\.abstractmethod
+
+    \# Py3\.6
+
+    \@overload
