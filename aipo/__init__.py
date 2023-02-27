@@ -1,6 +1,6 @@
 """Aipo is a small and simple asyncio task/job queue."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __author__ = "Caique Reinhold"
 __contact__ = "caiquereinhold@gmail.com"
 __homepage__ = "https://github.com/CaiqueReinhold/aipo"

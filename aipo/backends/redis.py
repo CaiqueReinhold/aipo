@@ -175,7 +175,7 @@ class RedisBroker(Broker):
         await asyncio.wait(
             [
                 self._curr_fetch,
-                self._stopped.wait(),
+                asyncio.create_task(self._stopped.wait()),
             ],
             return_when=asyncio.FIRST_COMPLETED,
         )

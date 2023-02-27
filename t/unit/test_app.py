@@ -7,6 +7,10 @@ from aipo.app import AipoApp
 from aipo.task import Task
 
 
+def dummy_task():
+    pass
+
+
 def test_app_init():
     app = AipoApp({"broker_url": "redis://localhost:6379/0"})
     assert app.loop is not None
@@ -14,10 +18,6 @@ def test_app_init():
     assert app._broker.__class__.__name__ == "RedisBroker"
     assert app._task_manager is not None
     assert app._event_manager is not None
-
-
-def dummy_task():
-    pass
 
 
 def test_app_task_decorator(monkeypatch):
